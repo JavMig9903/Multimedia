@@ -23,13 +23,15 @@ class MainActivity : AppCompatActivity() {
 
         edt.addTextChangedListener(object : TextWatcher {
             override fun onTextChanged(s: CharSequence,start: Int,before: Int,count: Int) {
-                val  ejemplo = edt.text.split(",");
             }
 
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
             }
 
             override fun afterTextChanged(s: Editable) {
+                val  ejemplo = edt.text.split(",");
+                if(ejemplo.size == 4)
+                    bot.isEnabled
             }
         })
 
