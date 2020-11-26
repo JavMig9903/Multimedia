@@ -73,6 +73,7 @@ class SecondActivity : AppCompatActivity() {
                     }
                 }
                 textv.text = mostrar
+
             }
         }
 
