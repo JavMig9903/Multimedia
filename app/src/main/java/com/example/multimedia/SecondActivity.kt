@@ -46,16 +46,16 @@ class SecondActivity : AppCompatActivity() {
             str?.let {
                 val  vocales: List<Char> =listOf('a','e','i','o','u','A','E','I','O','U');
                 var convertir = str.split(",").toMutableList()
-                var palabra = ""
+                var palabras = ""
                 var mostrar = ""
                 convertir.forEach{
                     var cadena = it
                     cadena.forEach{
                         if(it in vocales ){
-                             palabra = cadena.replace(it.toString(),it+it.toString())
+                             palabras = cadena.replace(it.toString(),it+it.toString())
                         }
                     }
-                    mostrar+=palabra+"\n"
+                    mostrar+=palabras+"\n"
                 }
                 textv.text = mostrar
             }
@@ -73,7 +73,6 @@ class SecondActivity : AppCompatActivity() {
                     }
                 }
                 textv.text = mostrar
-
             }
         }
 
