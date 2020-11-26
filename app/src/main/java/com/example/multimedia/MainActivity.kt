@@ -29,21 +29,16 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun afterTextChanged(s: Editable) {
-                val  ejemplo = edt.text.split(",");
+                val  ejemplo: List<String> = edt.text.split(",");
                 if(ejemplo.size == 4)
-                    bot.isEnabled
+                    bot.setEnabled(true)
             }
         })
 
         bot.setOnClickListener{
             val intent =  Intent ( this, SecondActivity :: class .java)
-            intent.putStringExtra(EJEX,ejemplo)
+            intent.putExtra(EJEX,edt.text.toString())
             startActivity (intent)
         }
-
-
-        //conversionLista = textoObtenido.split(" ").toMutableList()
-
-
     }
 }
